@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 23);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 250px 20px 250px;
+    height: 100vh;
+   
+}   
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    animation: upDown 1s;
+   
+}
+.nav-logo {
+    width: 140px;
+    height: 100px;
+}
+
+.navlink {
+    text-decoration: none;
+    color:white;
+    font-weight: 200;
+    transition: all 0.2s linear;
+ 
+}
+.navlink:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+  
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 100px;
+}
+
+.introduction {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 500px;
+    gap: 100px;
+    padding: 50px;
+    justify-content: space-evenly;
+
+}
+
+.welcome-message span {
+    display: block;
+    font-size: 90px;
+    transition: all 0.2s linear;
+    text-align: left;
+}
+
+.welcome-message:hover {
+    text-shadow: 0 0 50px rgb(109, 109, 231);
+  
+}
+
+
+
+
+.welcome-1{
+   animation: 1s leftRight ease-out;  
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.welcome-2{
+
+    animation: 1.5s leftRight ease-out;
+}
+
+
+
+.welcome-1:hover {
+   animation: leftRight 1.5s 1 ease, bounce 1.5s ease forwards;
+   opacity: 1;
+
+}
+
+.intro-video {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    animation: rightLeft 1.5s 1 ease;
+}
+iframe {
+    box-shadow: 0 0 5px 5px grey;
+}
+
+
+@keyframes rightLeft {
+    0% {
+        transform: translateX(100%); opacity: 0;
+    }
+    100% {
+        transform: translateX(0); opacity: 1;
+    }
+}
+
+@keyframes leftRight {
+    0% {
+        transform: translateX(-100%); opacity: 0;
+    }
+    100% {
+        transform: translateX(0); opacity: 1;
+    }
+}
+
+@keyframes upDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0)''
+    }
+}
+
+@keyframes bounce {
+    25% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(-100%) rotate(10deg);
+        
+    }
+    60% {
+         transform: rotate(-10deg);
+    }
+    75% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
+}
